@@ -1,0 +1,134 @@
+{
+    "products": [
+        {
+            "name": "Smartphone XYZ",
+            "id": "xyz-123",
+            "price": 599.99,
+            "brand": "BrandTech",
+            "category": "Electronics",
+            "events": {
+                "view_content": true,
+                "add_to_cart": false,
+                "initiate_checkout": false,
+                "purchase": false
+            }
+        },
+        {
+            "name": "Wireless Headphones ABC",
+            "id": "abc-456",
+            "price": 199.99,
+            "brand": "SoundPro",
+            "category": "Audio",
+            "events": {
+                "view_content": true,
+                "add_to_cart": true,
+                "initiate_checkout": false,
+                "purchase": false
+            }
+        },
+        {
+            "name": "Laptop UltraBook",
+            "id": "ub-789",
+            "price": 1099.99,
+            "brand": "CompMasters",
+            "category": "Computers",
+            "events": {
+                "view_content": true,
+                "add_to_cart": true,
+                "initiate_checkout": true,
+                "purchase": false
+            }
+        },
+        {
+            "name": "Smartwatch DEF",
+            "id": "def-321",
+            "price": 299.99,
+            "brand": "WristWear",
+            "category": "Wearables",
+            "events": {
+                "view_content": true,
+                "add_to_cart": true,
+                "initiate_checkout": true,
+                "purchase": true
+            }
+        },
+        {
+            "name": "Gaming Console GHI",
+            "id": "ghi-654",
+            "price": 499.99,
+            "brand": "GameBox",
+            "category": "Gaming",
+            "events": {
+                "view_content": true,
+                "add_to_cart": true,
+                "initiate_checkout": false,
+                "purchase": false
+            }
+        },
+        {
+            "name": "4K TV JKL",
+            "id": "jkl-987",
+            "price": 799.99,
+            "brand": "VisionPlus",
+            "category": "Home Entertainment",
+            "events": {
+                "view_content": true,
+                "add_to_cart": true,
+                "initiate_checkout": true,
+                "purchase": false
+            }
+        },
+        {
+            "name": "Bluetooth Speaker MNO",
+            "id": "mno-321",
+            "price": 149.99,
+            "brand": "SoundWave",
+            "category": "Audio",
+            "events": {
+                "view_content": true,
+                "add_to_cart": false,
+                "initiate_checkout": false,
+                "purchase": false
+            }
+        },
+        {
+            "name": "Tablet PQR",
+            "id": "pqr-654",
+            "price": 349.99,
+            "brand": "TechPad",
+            "category": "Tablets",
+            "events": {
+                "view_content": true,
+                "add_to_cart": true,
+                "initiate_checkout": false,
+                "purchase": false
+            }
+        },
+        {
+            "name": "Digital Camera STU",
+            "id": "stu-987",
+            "price": 549.99,
+            "brand": "PhotoSnap",
+            "category": "Photography",
+            "events": {
+                "view_content": true,
+                "add_to_cart": true,
+                "initiate_checkout": true,
+                "purchase": true
+            }
+        },
+        {
+            "name": "Smart Home Hub VWX",
+            "id": "vwx-123",
+            "price": 99.99,
+            "brand": "HomeSmart",
+            "category": "Smart Home",
+            "events": {
+                "view_content": true,
+                "add_to_cart": true,
+                "initiate_checkout": false,
+                "purchase": false
+            }
+        }
+    ]
+}

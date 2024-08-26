@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Layer</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6LW7MHLKR9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6LW7MHLKR9');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-M5877W35');</script>
+    <!-- End Google Tag Manager -->
+    <script src="./scripts/data-layer.js"></script>
+</head>
+
+<body>
+    <h1>Test Data-Layer</h1>
+
+    <h2>Lista de productos</h2>
+    <!-- Sección del carrito de compras -->
+    <div id="cart">
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: $0.00</p>
+        <button id="begin-checkout" class="begin-checkout">Continuar Compra</button>
+    </div>
+
+    <!-- Placeholder de productos -->
+    <div id="product-list"></div>
+
+    <!-- Popup de producto -->
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <h3 id="popup-title"></h3>
+            <p id="popup-id"></p>
+            <p id="popup-brand"></p>
+            <p id="popup-category"></p>
+            <p id="popup-price"></p>
+            <button id="close-popup">Cerrar</button>
+            <button class="add-to-cart" id="add-to-cart" data-action="add_to_cart">Add to cart</button>
+        </div>
+    </div>
+
+
+    <!-- Popup del carrito -->
+    <div id="cart-popup" class="popup-overlay">
+        <div class="popup-content">
+            <h3>Tu Carrito de Compras</h3>
+            <ul id="cart-popup-items"></ul>
+            <p id="cart-popup-total-price"></p>
+            <button class="purchase-btn" id="purchase-button" data-action="purchase">Comprar</button>
+            <button id="close-cart-popup">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5877W35" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script>
+        document.addEventListener('click', function (event) {
+            var productName = event.target.getAttribute('data-product-name');
+            var productId = event.target.getAttribute('data-product-id');
+            var productPrice = parseFloat(event.target.getAttribute('data-product-price'));
+            var productBrand = event.target.getAttribute('data-product-brand');
+            var productCategory = event.target.getAttribute('data-product-category');
+
+            if (event.target.classList.contains('view-content-btn')) {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'view_content',
+                    'data-product-name': productName,
+                    'data-product-id': productId,
+                    'data-product-price': productPrice,
+                    'data-product-brand': productBrand,
+                    'data-product-category': productCategory
+                });
+            } else if (event.target.classList.contains('add-to-cart')) {
+
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'add_to_cart',
+                    'data-product-name': productName,
+                    'data-product-id': productId,
+                    'data-product-price': productPrice,
+                    'data-product-brand': productBrand,
+                    'data-product-category': productCategory
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
